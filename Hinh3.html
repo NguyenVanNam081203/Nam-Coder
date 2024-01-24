@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình 3</title>
+</head>
+<body>
+    <div class="img-3">
+        <div class="row-1">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+        </div>
+        <div class="row-2">
+            <div class="circle-4"></div>
+            <div class="circle-5"></div>
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    
+    .img-3{
+        margin: 50px auto;
+        background: orange;
+        height: 197px;
+        width: 190px;
+        position: relative;
+    }
+
+    .circle-1, .circle-2, .circle-3, .circle-4, .circle-5{
+        border-radius: 100%;
+        position: absolute;
+    }
+    .row-1{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .row-1 .circle-1{
+        background: red;
+        height: 80px;
+        width: 80px;
+    }
+
+    .row-1 .circle-2{
+        background: green;
+        height: 80px;
+        width: 80px;
+        margin-top: 70px;
+        left: 55px;
+        top: -11px;
+    }
+
+    .row-1 .circle-3{
+        top: 0;
+        right: 0;
+        background: purple;
+        height: 80px;
+        width: 80px;
+    }
+
+    .row-2 .circle-4{
+        bottom: 0;
+        background: purple;
+        height: 80px;
+        width: 80px;
+    }
+
+    .row-2 .circle-5{
+        background: red;
+        height: 80px;
+        width: 80px;
+        margin-top: 50px;
+        bottom: 0;
+        right: 0;
+    }
+    
+
+</style>
+</html>

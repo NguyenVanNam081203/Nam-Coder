@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinh 8</title>
+    <link rel="stylesheet" href="../BTVN_CSS_Buoi4/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css">
+</head>
+
+<style>
+  *{
+    box-sizing: border-box;
+    }
+    .img-8{
+        background-color: #FFFFFF;
+        height: 600px;
+        width: 370px;
+        margin: 50px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        border-radius: 10px;
+    }
+
+    .inner-container {
+        margin: 20px;
+    }
+
+    .log-in{
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 45.56px;
+        margin-left: 20px;
+        position: absolute;
+        top:5px;
+        left: -10px;
+    }
+
+    a i{
+        position: absolute;
+        font-size: 30px;
+        color:#0000001A;
+        right: 15px;
+        top:15px;
+    }
+
+    .g-login {
+        background-color: #ffffff;
+        border: 2px solid rgba(145, 140, 140, 0.1);
+        border-radius: 8px;
+        padding: 10px 20px;
+        width: 330px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #333333;
+        cursor: pointer;
+        top: 80px;
+        position: absolute;
+    }
+
+    .end-1{
+        margin-top: 100px;
+        border: 1px solid rgba(145, 140, 140, 0.1);
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+
+    .form-group input {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .form-group input:focus {
+        outline: none;
+        border: 1px solid #007bff;
+    }
+
+    .form-group-check {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .form-group-check input {
+        margin-right: 10px;
+        height: 50px;
+        width: 15px;
+        cursor: pointer;
+    }
+
+    .form-group-check label {
+        margin-top: 10px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    .fa-eye {
+        position: absolute;
+        top: 47%;
+        right: 30px;
+        color: #ddd;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .input-submit {
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        height: 45px;
+    }
+
+    .input-submit:hover {
+        background-color: #0069d9;
+    }
+
+    .form-group p {
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        color: rgba(0, 133, 255, 1);
+    }
+
+    .footer p {
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    span{
+        color: rgba(0, 133, 255, 1);
+    }
+
+
+</style>
+<body>
+    <div class="img-8">
+        <div class="inner-container">
+            <div class="headear"></div>
+            <p class="log-in">Log in</p>
+            <a href=""><i class="fa-regular fa-circle-xmark"></i></a>
+            <button class="g-login">
+                G Log in with Google
+            </button>
+            <hr class="end-1">
+
+            <div class="main">
+                <form action="">
+                    
+                    <div class="form-group">
+                        <label for="fname">Email</label>
+                        <input type="text" id="fname" name="firstname" placeholder="leslie@pixsellz.io">
+                    
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password">
+                        <i class="fa-regular fa-eye"></i>
+                        
+                        <div class="form-group-check">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                    
+                        <input type="submit" class="input-submit"  value="Log in">
+                        
+                        <p>Forgot Password?</p>
+                    </div>
+                    
+                    <hr style="border: 1px solid rgba(145, 140, 140, 0.1);">
+
+                </form>
+            </div>
+            
+            <div class="footer">
+                <p>Don't have an account ?<br> <span>Sign up</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
