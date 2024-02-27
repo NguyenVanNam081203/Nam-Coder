@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    let n = parseInt(prompt("Nhập số:")); // prompt trả về một kiếu string nên phải chuyển về nguyên dương
+
+    function isPrime(n){
+        if (n <= 1){
+            return false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(n); i++) { // tối ưu bài toán hơn bằng cách dùng Sqrt 
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function isPerfectNumber(n){
+        if ( n <= 0 ){
+            return false; // kiểm tra số nguyên dương
+        }
+
+        let sum = 0;
+        for (let i = 1; i < n ; i++){
+            if( n % i == 0){
+                sum += i; // tính tổng các ước số
+            }
+        }
+        return sum === n ;
+    }
+    
+    if (!isNaN(n)) { // !isNaN kiểm tra có phải số nguyên không 
+        if (isPrime(n)) {
+            console.log(n + " là số nguyên tố.");
+        } else {
+            console.log(n + " không phải là số nguyên tố.");
+        }
+        
+        if(!isPerfectNumber(n)){
+            console.log(n + " không phải là số hoàn hảo.");
+        } else {
+            console.log(n + " là số hoàn hảo.");
+        }     
+
+    } else {
+        console.log("Vui lòng nhập một số nguyên dương.");
+    }
+
+</script>
+</html>

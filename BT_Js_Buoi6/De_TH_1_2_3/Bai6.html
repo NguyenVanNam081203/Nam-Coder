@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            {
+                brand: 'Huyndai',
+                model: 'Santafe'
+            },{
+                brand: 'Huyndai',
+                model: 'Sonata'
+            },{
+                brand: 'Vinfact',
+                model: 'Lux SA'
+            },{
+                brand: 'Toyota',
+                model: 'Camry'
+            },{
+                brand: 'Vinfact',
+                model: 'Lux A'
+            },{
+                brand: 'Toyota',
+                model: 'Vios'
+            }
+        ]
+
+        let groupBrand = []
+        for ( let i = 0; i < arr.length; i++){
+            let pair1 = arr[i];
+            let group = '';
+            for (let j  = 0 ; j < groupBrand.length; j++){
+                let pair2 = groupBrand[j];
+                if(pair1.brand === pair2[0].brand || pair1.model === pair2[0].model){
+                    groupBrand[j].push(pair1);
+                    group = groupBrand[j];
+                    break;
+                }
+            }
+            if(!group){
+                groupBrand.push([pair1]);
+            }
+        }
+
+        console.log(groupBrand);
+    </script>
+</body>
+</html>
