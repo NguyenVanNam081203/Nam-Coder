@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        height: 300px;
+        width: 500px;
+        border: 1px solid black;
+        position: relative;
+        margin: 100px auto;
+    }
+
+    .box{
+        height: 80px;
+        width: 80px;
+        background-color: red;
+        position: absolute;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+</body>
+<script>
+    let box = document.querySelector('.box');
+    let main = document.querySelector('.main');
+    let mainWidth = main.offsetWidth;
+    let mainHeight = main.offsetHeight;
+    
+    function moveToTopRight() {
+        box.style.top = '0px';
+        box.style.left = (mainWidth - box.offsetWidth) + 'px';
+        setTimeout(moveToBottomRight, 2000);
+    }
+
+    function moveToBottomRight() {
+        box.style.top = (mainHeight - box.offsetHeight) + 'px';
+        box.style.left = (mainWidth - box.offsetWidth) + 'px';
+        setTimeout(moveToBottomLeft, 2000);
+    }
+
+    function moveToBottomLeft() {
+        box.style.top = (mainHeight - box.offsetHeight) + 'px';
+        box.style.left = '0px';
+        setTimeout(moveToTopLeft, 2000);
+    }
+
+    function moveToTopLeft() {
+        box.style.top = '0px';
+        box.style.left = '0px';
+        setTimeout(moveToTopRight, 2000);
+    }
+
+    setTimeout(moveToTopRight, 2000);
+</script>
+</html>

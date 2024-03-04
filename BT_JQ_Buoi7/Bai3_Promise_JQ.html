@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js" type="text/javascript"></script>
+</head>
+<script>
+$(document).ready(function() {
+    let $box = $('.box');
+    let $main = $('.main');
+    let mainWidth = $main.width();
+    let mainHeight = $main.height();
+
+    let promise = new Promise(
+        function(resolve, reject) {
+            // Logic
+            // Nếu thành công: resolve()
+            // Nếu thất bại: reject()
+            // .then (function)
+            // .catch (function(error))
+            // .finally (function)
+            setTimeout(function(){
+                resolve();
+            }, 2000);
+        }
+    );
+
+    promise
+        .then(function moveToBottomRight() {
+            return $box.css({
+                'top': '0px',
+                'left': (mainWidth - $box.width()) + 'px'
+            });
+        })
+
+        .then(function moveToBottomLeft() {
+            return $box.css({
+                'top': (mainHeight - $box.height()) + 'px',
+                'left': (mainWidth - $box.width()) + 'px'
+            });
+        })
+
+        .then(function moveToTopLeft() {
+            return $box.css({
+                'top': (mainHeight - $box.height()) + 'px',
+                'left': '0px'
+            });
+        })
+
+        .then(function moveToTopRight() {
+            return $box.css({
+                'top': '0px',
+                'left': '0px'
+            });
+        })
+
+        .then(function() {
+            setTimeout(moveToTopRight, 2000);
+        })
+    
+});
+
+</script>
+<style>
+    .main{
+        height: 300px;
+        width: 500px;
+        border: 1px solid black;
+        position: relative;
+        margin: 100px auto;
+    }
+
+    .box{
+        height: 80px;
+        width: 80px;
+        background-color: red;
+        position: absolute;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
